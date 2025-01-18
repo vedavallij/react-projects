@@ -1,0 +1,30 @@
+
+.home-welcome-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    cursor: pointer;
+  }
+  
+  .typewriter {
+    font-size: 80px;
+    font-weight: 100px;
+    color:#520e54;
+    overflow: hidden;
+  }
+  
+  .animate {
+    animation: typewriter 2s steps(10, end);
+  }
+  
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 9ch;
+    }
+  }
+ 
+  
