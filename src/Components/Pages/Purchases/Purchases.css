@@ -1,0 +1,32 @@
+.purchases {
+    padding: 60px;
+  }
+  
+  .purchases-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  .purchases-table th, .purchases-table td{
+    padding: 15px;
+    text-align: Center;
+  }
+
+  .product-link {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .btn-track, .btn-cancel {
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 10px;
+    width: 80px;
+    border-radius: 8px;
+  }
+  

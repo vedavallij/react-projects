@@ -1,30 +1,50 @@
+.home-intro{
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  padding: 30px;
+  margin: 30px;
 
-.home-welcome-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    cursor: pointer;
+  h1{
+    color: #69136c;
+    margin-bottom: 20px;
+    text-align: center;
   }
-  
-  .typewriter {
-    font-size: 80px;
-    font-weight: 100px;
-    color:#520e54;
-    overflow: hidden;
+
+  p{
+    font-size: 18px;
+    text-align: center;
   }
-  
-  .animate {
-    animation: typewriter 2s steps(10, end);
-  }
-  
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 9ch;
-    }
-  }
- 
-  
+}
+
+.dashboard{
+  color: #69136c;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+.product-button {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 15px;
+  background-color: #820e86;
+  border-radius: 500px;
+  width: 300px;
+  margin-top: 30px;
+}
+
+.Link {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+ .Link:hover{
+  color: black;
+ }
+
+.arrow {
+  font-size: 25px;
+  margin-left: 10px;
+}

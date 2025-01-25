@@ -1,41 +1,29 @@
 import './App.css'
-/* import { useState } from 'react' */
 import Navbar from './Components/Pages/Navbar/Navbar'
 import Login from './Components/Pages/Login/Login'
 import Products from './Components/Pages/Products/Products'
-import { Route, Routes } from 'react-router'
+import { Navigate, Route, Routes } from 'react-router'
 import Home from './Components/Pages/Home/Home'
+import Dashboard from './Components/Pages/Dashboard/Dashboard'
+import Purchases from './Components/Pages/Purchases/Purchases'
+import PurchaseDetails from './Components/Pages/Purchase Details/Purchase Details'
 
 
 function App() {
-  /* const currentpath = location.pathname;
   
-  
-
-  if(currentpath === '/Login'){
-    currentcomponent= <Login></Login>
-  } */
- 
-/*  const[state,setstate]=useState(false);
- const currentcomponent= <h1>Unknown Path</h1>
-
- function displaycontent(){
-  setstate(true)
- }
- */
   return(
     <div>
       <Navbar />
-      {/* <button onClick={displaycontent}> Click </button> */}
-      {/* {state?currentcomponent:null} */}
       <Routes>
+        <Route path='/Home' element={<Home/>}/>
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Products' element={<Products/>}/>
-        <Route path='/Home' element={<Home/>}/>
+        <Route path='/Dashboard' element={<Dashboard/>}/>
+        <Route path='/Purchases' element={<Purchases/>}/>
+        <Route path='/' element={<Navigate to='/Home' replace/>} />
+        <Route path="/" element={<Purchases />} />
+        <Route path="/purchase/:id" element={<PurchaseDetails />} />
       </Routes>
-      {/* <h1>{currentpath}</h1>
-      {currentcomponent} */}
-     
     </div>
 )
 }

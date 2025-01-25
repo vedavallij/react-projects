@@ -1,45 +1,73 @@
-
-.main-nav{
-    display:flex;
+.main-nav {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
+    padding-left: 40px;
 }
 
-.menu-icon{
+.Links {
+    font-size: 18px;
     color: black;
-    font-size: 50px;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
-.menu-links{
-    display: flex;
-}
-
-.Links{
-    font-size: 17px;
-    color: Black;
     text-decoration: none;
+    padding-right: 30px;
+}
+
+.Links:hover {
+    color: #821a7a;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+h5 {
+    color: #63085b;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0px;
     padding-right: 20px;
 }
 
-.nav-right{
+.logo{
+    text-decoration: none;
+    color: #63085b;
+}
+
+.logo:hover{
+    color: black;
+}
+
+.nav-right {
     display: flex;
     align-items: center;
+}
 
-    p{
-        color: black;
-        text-decoration: none;
+.account {
+    font-size: 35px !important;
+    color: white;
+}
+
+@media (max-width: 992px) {
+    .main-nav {
+        padding-left: 20px;
+        flex-direction: column;
+        align-items: flex-start;
     }
-}
 
-.menu-icon{
-    color: black;
-    font-size: 30px;
-    cursor: pointer;
-}
+    .nav-left, .nav-right {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
 
-.icon-section{
-    align-items: center;
+    .Links {
+        padding-right: 0;
+    }
+
+    .account {
+        font-size: 30px !important;
+    }
 }
