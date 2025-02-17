@@ -1,32 +1,31 @@
 .purchases {
-    padding: 60px;
-  }
-  
-  .purchases-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #ddd;
-  }
-  
-  .purchases-table th, .purchases-table td{
-    padding: 15px;
-    text-align: Center;
-  }
+  max-width: 1350px;
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  .product-link {
-    background: none;
-    border: none;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
-  .btn-track, .btn-cancel {
-    margin-right: 10px;
-    margin-left: 10px;
-    cursor: pointer;
-    padding: 10px;
-    width: 80px;
-    border-radius: 8px;
-  }
-  
+.purchases h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.purchase-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.purchase-table th, .purchase-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.purchase-table th {
+  background: #651567;
+  color: white;
+}
+
+

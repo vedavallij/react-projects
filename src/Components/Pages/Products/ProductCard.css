@@ -1,0 +1,121 @@
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 40px;
+    padding: 80px;
+    justify-content: center;
+  }
+  
+  .product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .product-card h4 {
+    font-size: 22px;
+    color:#651567;
+    font-weight: 700;
+    margin: 15px 0;
+  }
+  
+  .product-card p {
+    font-size: 18px;
+    color: #000000;
+  }
+  
+  .product-card button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 110px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: 6px;
+    color: White;
+    background-color: #69136c;
+    padding: 6px;
+    border-radius: 40px;
+  }
+  
+  .product-card button:hover {
+    background-color: #4b0e4d;
+  }
+
+.stock-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.stock-form input {
+  width:250px;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+} 
+
+.stock-form .button-group {
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 10px;
+}
+
+.stock-form button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  width: 48%; 
+  text-align: center;
+}
+
+.stock-form button[type="submit"] {
+  background: #651567;
+  color: white;
+}
+
+.stock-form button[type="button"] {
+  background: #dc3545;
+  color: white;
+}
+
+  
+  
+  @media screen and (max-width: 1024px) {
+    .product-grid {
+      grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 cards per row */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(1, minmax(250px, 1fr)); /* 1 card per row */
+    }
+  }
+  

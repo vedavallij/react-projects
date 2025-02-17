@@ -1,40 +1,24 @@
 import { NavLink } from 'react-router';
 import './Home.css';
+import { products } from '../Data Storage/Data';
 
 function Home() {
-  const stockData = [
-    { id: 1, fruit: 'Apples', quantity: '150 kg', price: '₹100/kg', value: '₹15000' },
-    { id: 2, fruit: 'Bananas', quantity: '200 dozen', price: '₹50/dozen', value: '₹10000' },
-    { id: 3, fruit: 'Oranges', quantity: '10 kg', price: '₹120/kg', value: '₹1200' },
-    { id: 4, fruit: 'Grapes', quantity: '20 kg', price: '₹50/kg', value: '₹1000' },
-    { id: 5, fruit: 'Guava', quantity: '30 kg', price: '₹30/kg', value: '₹900' },
-    { id: 6, fruit: 'Mustard Apple', quantity: '10 kg', price: '₹90/kg', value: '₹900' },
-    { id: 7, fruit: 'Pomegranate', quantity: '15 kg', price: '₹100/kg', value: '₹1500' },
-    { id: 8, fruit: 'Papaya', quantity: '10 kg', price: '₹40/kg', value: '₹400' }
-  ];
-
   return (
     <><div className="home-intro">
-    <h1>Welcome to Fruit Hub!</h1>
-    <p>
-      Your one-stop destination for the freshest and healthiest fruits delivered straight to your door. 
-      We offer a wide variety of high-quality fruits, sourced directly from trusted farmers, ensuring you get 
-      the best produce every time. Whether you're looking for seasonal fruits or exotic varieties, we've got you covered!
-    </p>
-    
-    <p>
-      Explore our range of fruits, check stock availability, and discover the best prices. We take pride in offering 
-      not just fresh fruits, but a delightful experience from the moment you order until it reaches your doorstep. 
-      Enjoy healthy living with Fruit Hub!
-    </p>
-  
-    <button className="product-button"> <NavLink className="Link" to="/Products"> Explore Our Fruits Now <span className='arrow'> &rarr; </span> </NavLink> </button>
-  </div>
+      <h1>Keep Track of Your Fresh Fruits!</h1>
+      <p>
+        Never lose track of your fruit inventory with our smart stock management system! Stay up-to-date with the availability
+        of your favorite fruits and ensure that you're always ready to meet customer demands. Our simple interface lets you
+        monitor your stock in real-time, making it easy to manage purchases and restocking.
+      </p>
 
-  <h2 className='dashboard'> Our Dashboard </h2>
+      <button className="product-button"> <NavLink className="Link" to="/Dashboard"> Check Your Stock Now <span className='arrow'> &rarr; </span> </NavLink> </button>
+    </div>
 
-  <div className="container">
-   
+      <h2 className='dashboard'> Our Dashboard </h2>
+
+      <div className="container">
+
         <div className="left-section">
           <div className="card">
             <h2>Total Fruits in Stock</h2>
@@ -56,18 +40,16 @@ function Home() {
             <thead>
               <tr>
                 <th>Fruit</th>
-                <th>Quantity</th>
-                <th>Price per Unit</th>
-                <th>Stock Value</th>
+                <th>Stock</th>
+                <th>Price per Kg</th>
               </tr>
             </thead>
             <tbody>
-              {stockData.map((item) => (
+              {products.map((item) => (
                 <tr key={item.id}>
-                  <td>{item.fruit}</td>
-                  <td>{item.quantity}</td>
-                  <td>{item.price}</td>
-                  <td>{item.value}</td>
+                  <td>{item.name}</td>
+                  <td>{item.stock}kg</td>
+                  <td>₹{item.price}</td>
                 </tr>
               ))}
             </tbody>
