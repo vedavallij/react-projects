@@ -1,8 +1,6 @@
 import './Dashboard.css';
-import { products } from "../Data Storage/Data";
 
-
-function Dashboard() {
+function Dashboard({products}) {
     return (
         <div className="container">
             <div className="left-section">

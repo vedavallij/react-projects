@@ -18,10 +18,4 @@ export const products = [
   { id: 7, name: 'Pomegranate', stock: 15, price: 100, image: pomegranate },
   { id: 8, name: 'Papaya', stock: 10, price: 40, image: papaya }
 ];
-
-  
-  export const purchases = [
-    { id: 1, productId: 2, quantity: 3 }, // Bought 3 Bananas
-    { id: 2, productId: 1, quantity: 2 }  // Bought 2 Apples
-  ];
   

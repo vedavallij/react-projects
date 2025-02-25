@@ -1,8 +1,7 @@
 import { NavLink } from 'react-router';
 import './Home.css';
-import { products } from '../Data Storage/Data';
 
-function Home() {
+function Home({products}) {
   return (
     <><div className="home-intro">
       <h1>Keep Track of Your Fresh Fruits!</h1>

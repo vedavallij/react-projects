@@ -6,34 +6,42 @@ import { Navigate, Route, Routes } from 'react-router'
 import Home from './Components/Pages/Home/Home'
 import Dashboard from './Components/Pages/Dashboard/Dashboard'
 import Purchases from './Components/Pages/Purchases/Purchases'
-import PurchaseDetails from './Components/Pages/Purchase Details/Purchase Details'
 import { useState } from 'react'
-import { products as initialProducts } from "./Components/Pages/Data Storage/Data";
+import { products as initialProducts } from "./Components/Pages/dataStorage/Data";
 
 
 function App() {
   const [products, setProducts] = useState(initialProducts);
+  const [purchases, setPurchases] = useState<{ productId: number; quantity: number; date: string }[]>([]);
+
 
   function updateStock(productId: number, quantity: number) {
     setProducts((productsBefore) =>
       productsBefore.map((product) =>
         product.id === productId
-          ? { ...product, stock: product.stock + quantity } : product
+          ? { ...product, stock: product.stock + quantity }
+          : product
       )
     );
-  };
+  
+    const date = new Date().toLocaleDateString("en-GB"); 
+  
+    setPurchases((prevPurchases) => [
+      ...prevPurchases,
+      { productId, quantity, date },
+    ]);
+  }
+  
   return(
     <div>
       <Navbar />
       <Routes>
-        <Route path='/Home' element={<Home/>}/>
-        <Route path='/Login' element={<Login/>}/>
+      <Route path="/Home" element={<Home products={products} />} />
+      <Route path='/Login' element={<Login/>}/>
         <Route path='/Products' element={<Products products={products} updateStock={updateStock}/>}/>
-        <Route path='/Dashboard' element={<Dashboard/>}/>
-        <Route path='/Purchases' element={<Purchases/>}/>
+        <Route path="/Dashboard" element={<Dashboard products={products} />} />
+        <Route path='/Purchases' element={<Purchases purchases={purchases} />}/>
         <Route path='/' element={<Navigate to='/Home' replace/>} />
-        <Route path="/" element={<Purchases />} />
-        <Route path="/purchase/:id" element={<PurchaseDetails />} />
       </Routes>
     </div>
 )

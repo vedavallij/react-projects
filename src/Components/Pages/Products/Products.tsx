@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { products as initialProducts } from "../Data Storage/Data";
 import ProductCard from "./ProductCard";
 import "./Products.css";
 
