@@ -1,6 +1,14 @@
-import './Dashboard.css';
+import './dashboard.css';
 
-function Dashboard({products}) {
+interface productType {
+    id: number;
+    name: string;
+    stock: number;
+    price: number;
+    image: string;
+  }
+
+function Dashboard({products}: {products: productType[]}) {
     return (
         <div className="container">
             <div className="left-section">

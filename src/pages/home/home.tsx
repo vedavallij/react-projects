@@ -1,7 +1,16 @@
 import { NavLink } from 'react-router';
-import './Home.css';
+import './home.css';
 
-function Home({products}) {
+interface productType {
+  id: number;
+  name: string;
+  stock: number;
+  price: number;
+  image: string;
+}
+
+
+function Home({ products }: { products: productType[] }) {
   return (
     <><div className="home-intro">
       <h1>Keep Track of Your Fresh Fruits!</h1>

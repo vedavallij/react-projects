@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router'
 import AccountCircleIcon from "@mui/icons-material/AccountCircle"
-import './Navbar.css'
+import './navbar.css'
 
 function Navbar() {
     return (

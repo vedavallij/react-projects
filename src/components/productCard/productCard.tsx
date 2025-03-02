@@ -1,10 +1,24 @@
 import { useState } from 'react';
-import './ProductCard.css';
-function ProductCard({ product, updateStock }) {
+import './productCard.css';
+
+interface productType {
+  id: number;
+  name: string;
+  stock: number;
+  price: number;
+  image: string;
+}
+
+interface propsType{
+  product: productType;
+  updateStock:(productId: number, quantity: number) => void;
+}
+
+function ProductCard({ product, updateStock }: propsType) {
   const [showForm, setShowForm] = useState(false);
   const [stockToAdd, setStockToAdd] = useState("");
 
-  function submit(e) {
+  function submit(e: React.FormEvent) {
     e.preventDefault();
     const quantity = parseInt(stockToAdd, 10);
 

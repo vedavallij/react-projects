@@ -1,13 +1,13 @@
-import './App.css'
-import Navbar from './Components/Pages/Navbar/Navbar'
-import Login from './Components/Pages/Login/Login'
-import Products from './Components/Pages/Products/Products'
+import './app.css'
 import { Navigate, Route, Routes } from 'react-router'
-import Home from './Components/Pages/Home/Home'
-import Dashboard from './Components/Pages/Dashboard/Dashboard'
-import Purchases from './Components/Pages/Purchases/Purchases'
 import { useState } from 'react'
-import { products as initialProducts } from "./Components/Pages/dataStorage/Data";
+import { products as initialProducts } from "./dataStorage/data.tsx";
+import Navbar from './components/navbar/navbar';
+import Login from './pages/login/login';
+import Products from './pages/products/products';
+import Dashboard from './pages/dashboard/dashboard';
+import Purchases from './pages/purchases/purchases';
+import Home from './pages/home/home';
 
 
 function App() {
@@ -36,12 +36,12 @@ function App() {
     <div>
       <Navbar />
       <Routes>
-      <Route path="/Home" element={<Home products={products} />} />
-      <Route path='/Login' element={<Login/>}/>
-        <Route path='/Products' element={<Products products={products} updateStock={updateStock}/>}/>
-        <Route path="/Dashboard" element={<Dashboard products={products} />} />
-        <Route path='/Purchases' element={<Purchases purchases={purchases} />}/>
-        <Route path='/' element={<Navigate to='/Home' replace/>} />
+      <Route path="/home" element={<Home products={products} />} />
+      <Route path='/login' element={<Login/>}/>
+        <Route path='/products' element={<Products products={products} updateStock={updateStock}/>}/>
+        <Route path="/dashboard" element={<Dashboard products={products} />} />
+        <Route path='/purchases' element={<Purchases purchases={purchases} />}/>
+        <Route path='/' element={<Navigate to='/home' replace/>} />
       </Routes>
     </div>
 )

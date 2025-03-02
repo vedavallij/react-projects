@@ -1,23 +1,23 @@
-.home-intro{
+.home-intro {
   background-color: transparent;
   border-radius: 6px;
   border: 1px solid #fff;
   padding: 30px;
   margin: 30px;
 
-  h1{
+  h1 {
     color: #69136c;
     margin-bottom: 20px;
     text-align: center;
   }
 
-  p{
+  p {
     font-size: 18px;
     text-align: center;
   }
 }
 
-.dashboard{
+.dashboard {
   color: #69136c;
   margin-left: 50px;
   margin-top: 40px;
@@ -40,9 +40,10 @@
   color: white;
   font-size: 20px;
 }
- .Link:hover{
+
+.Link:hover {
   color: black;
- }
+}
 
 .arrow {
   font-size: 25px;

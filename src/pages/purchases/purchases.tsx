@@ -1,7 +1,14 @@
-import { products } from "../dataStorage/Data";
+import { products } from "../../dataStorage/data";
 import "./Purchases.css";
 
-function PurchasesPage({ purchases }) {
+interface purchasesType {
+  id?: number;
+  date: string;
+  productId: number;
+  quantity: number;
+}
+
+function PurchasesPage({ purchases }: { purchases: purchasesType[] }) {
   return (
     <div className="purchases">
       <h3>Your Purchase History</h3>
@@ -14,7 +21,7 @@ function PurchasesPage({ purchases }) {
           </tr>
         </thead>
         <tbody>
-          {purchases.map((purchase :{ productId: number; quantity: number; date: string }) => {
+          {purchases.map((purchase) => {
             const product = products.find((p) => p.id === purchase.productId);
             return (
               <tr key={purchase.id}>
